@@ -1,0 +1,95 @@
+/*****************************
+			main
+*****************************/
+body{
+	background: #108FDE;
+	padding-top: 20px;
+	min-width: 320px;
+}
+a:hover{
+	cursor: pointer;
+}
+a:focus, input:focus{
+	outline: none; /*отключить внешние границы*/
+	background: transparent; /*отключить background*/
+}
+button{
+	outline: none;
+}
+ul{
+	padding-left: 0;
+	li{
+		list-style-type: none;
+	}
+}
+/*****************************
+			block
+*****************************/
+.block{
+	background: #fff;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px -1px #0406f9;
+	&__info{
+		&.pallet{display: none;}
+		p{margin: 0; font-weight: bold;}
+	}
+}
+.town-group {
+	button{
+		position: relative;
+		padding-right: 35px;
+		width: 130px;
+		&:after{
+			position: absolute;
+			content: "";
+			width: 10px;
+			height: 10px;
+			top: 4px;
+			right: 10px;
+			content: "\f0dd";
+			font-family: "FontAwesome";
+		}
+	}
+	.dropdown-menu a{
+		display: block;
+		padding: 5px 10px;
+	}
+}
+.form{min-height: 300px;}
+.input-group{margin-bottom: 10px;}
+.buttons{margin-bottom: 40px; color: #fff; }
+.buttons .btn{font-weight: bold; width: 100%; margin-bottom: 10px}
+.buttons .btn:hover, .buttons .btn:focus{color:#fff; opacity: 0.8;}
+.btn-blue{background: blue;}
+.btn-red{background: red;}
+/*switch*/
+.bootstrap-switch{
+	left: 50%;
+    margin-top: 20px;
+    margin-left: -50px;
+}
+
+
+/*****************************
+			media
+*****************************/
+
+@media screen and (min-width: 768px){
+	.buttons .btn{margin-bottom: 0; width: inherit;}
+	.btn-red{float: right;}
+}
+
+@media screen and (min-width: 992px){
+	.bootstrap-switch{
+		left: 0;
+		margin-left: 0;
+	}
+	.form{min-height: inherit;}
+	.block__info{
+		.input-group{
+			max-width: 130px;
+		}
+	}
+}
